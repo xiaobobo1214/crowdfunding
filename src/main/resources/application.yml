@@ -1,36 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /crowdfunding
+
 spring:
+
+######################mysql
   datasource:
-    #数据库地址
-    url: jdbc:mysql://47.103.10.32:3306/test?serverTimezone=GMT%2B8
-    #用户名
     username: root
-    #密码
     password: root
-    #mysql驱动
-    driver-class-name: com.mysql.jdbc.Driver
-    #
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.103.10.32:3306/crowdfunding?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
     type: com.alibaba.druid.pool.DruidDataSource
+######################redis
   redis:
-    #连接池
     jedis:
-      pool:
-        #最大连接个数
-        max-active: 10
-        #等待时间
-        max-wait: 6000ms
-        #最大空闲
-        max-idle: 8
-        #初始化最小
-        min-idle: 5
-        #操作第几个库
-    database: 1
+      pool:                         #连接池
+        max-active: 10              #最大连接个数
+        max-wait: 6000ms            #等待时间
+        max-idle: 8                 #最大空闲
+        min-idle: 5                 #初始化最小
+    database: 1                     #操作第几个库
     #redis路径
     host: 47.103.10.32
     password: redis
-mybatis-plus:
-  configuration:
-    #sql日志
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    map-underscore-to-camel-case: true
-    #控制台打印加载
-debug: true
+logging:
+  file: logs/mysql.log
+  level:
+    cn:
+      shangze:
+        boot:
+          modules:
+            oa:
+              mapper: debug
