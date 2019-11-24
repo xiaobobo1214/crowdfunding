@@ -1,35 +1,8 @@
-server:
-  port: 8080
-  servlet:
-    context-path: /crowdfunding
-
-spring:
-
-######################mysql
-  datasource:
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.103.10.32:3306/crowdfunding?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
-    type: com.alibaba.druid.pool.DruidDataSource
-######################redis
-  redis:
-    jedis:
-      pool:                         #连接池
-        max-active: 10              #最大连接个数
-        max-wait: 6000ms            #等待时间
-        max-idle: 8                 #最大空闲
-        min-idle: 5                 #初始化最小
-    database: 1                     #操作第几个库
-    #redis路径
-    host: 47.103.10.32
-    password: redis
 logging:
   file: logs/mysql.log
   level:
-    cn:
-      shangze:
-        boot:
-          modules:
-            oa:
-              mapper: debug
+    com:
+      xiaobobo:
+        crowdfunding:
+          dao: debug
+

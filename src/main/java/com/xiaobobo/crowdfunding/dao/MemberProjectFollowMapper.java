@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2019-11-21 10:45:48
  */
 @Mapper
-public interface MemberProjecfollowDao extends BaseMapper<MemberProjecfollow> {
+public interface MemberProjectFollowMapper extends BaseMapper<MemberProjecfollow> {
 	
 }

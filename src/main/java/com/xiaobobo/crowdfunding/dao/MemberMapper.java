@@ -1,6 +1,6 @@
 package com.xiaobobo.crowdfunding.dao;
 
-import com.xiaobobo.crowdfunding.entity.MemberAddress;
+import com.xiaobobo.crowdfunding.entity.Member;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2019-11-21 10:45:48
  */
 @Mapper
-public interface MemberAddressDao extends BaseMapper<MemberAddress> {
+public interface MemberMapper extends BaseMapper<Member> {
 	
 }

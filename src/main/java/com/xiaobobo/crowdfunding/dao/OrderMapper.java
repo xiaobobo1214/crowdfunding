@@ -1,6 +1,6 @@
 package com.xiaobobo.crowdfunding.dao;
 
-import com.xiaobobo.crowdfunding.entity.RolePermission;
+import com.xiaobobo.crowdfunding.entity.Order;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -9,9 +9,9 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author xiaobobo
  * @email 994301552@qq.com
- * @date 2019-11-21 10:45:43
+ * @date 2019-11-21 10:45:48
  */
 @Mapper
-public interface RolePermissionDao extends BaseMapper<RolePermission> {
+public interface OrderMapper extends BaseMapper<Order> {
 	
 }
